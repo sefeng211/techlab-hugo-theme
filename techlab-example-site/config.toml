@@ -1,0 +1,32 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'TechLab Hugo Theme'
+theme = "techlab"
+hasCJKLanguage = true
+
+[menu]
+[[menu.main]]
+  name = 'About'
+  url = '/about/'
+  weight = 2
+[[menu.main]]
+  name = 'All Posts'
+  url = '/all-posts/'
+  weight = 1
+[[menu.main]]
+  name = 'RSS'
+  url = '/index.xml'
+  weight = 3
+
+[params]
+  description = "This is the sample site of TechLab Hugo Theme. This theme uses the Light Nord color scheme and targets simplicity."
+  includeFooter = true
+  [params.social]
+    Email = ""
+    Github = "https://github.com/sefeng211/techlab-hugo-theme"
+    Bilibili = ""
+    Linkedin = ""
+
+[taxonomies]
+  tag = "tags"
+  example = "examples"
