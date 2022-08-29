@@ -2,6 +2,7 @@
 title: "Semper semper tortor"
 date: 2022-08-29T02:41:08Z
 draft: true
+tags: ["tag1", "tag2"]
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In condimentum bibendum ultrices. Quisque eget quam iaculis, elementum neque eget, maximus dui. Phasellus vitae vehicula nibh. Sed fermentum neque a orci mollis, sed mattis nulla mollis. Aenean interdum, urna a condimentum blandit, urna enim lacinia turpis, vel mattis orci odio at quam. Nulla pulvinar interdum elit, ac porta sapien suscipit vitae. Cras rutrum eros tellus, id venenatis metus consectetur at. Donec vestibulum lectus aliquet ante porttitor, sed malesuada libero tempus.
 
