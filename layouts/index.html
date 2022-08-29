@@ -1,0 +1,77 @@
+{{ define "main" }}
+
+<div class="main_section">
+  <div class="menu">
+    <ul class="menu_list">
+      {{ range .Site.Menus.main }}
+        <li class="menu_item">
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+  <h2 class="site_title"> {{ .Site.Title }}</h2>
+
+  {{ range $key, $value := .Site.Params.social }}
+    {{ if eq $key "email" }}
+      <a href="mailto: {{ $value }}" class="social_icon_a">
+        <i class="far fa-envelope social_icon"></i>
+      </a>
+    {{ else if eq $key "bilibili" }}
+      <a href="{{ $value }}" class="social_icon_a">
+        <i class="fa-brands fa-bilibili social_icon" ></i>
+      </a>
+    {{ else if eq $key "linkedin" }}
+      <a href="{{ $value }}" class="social_icon_a">
+        <i class="fa-brands fa-linkedin social_icon"></i>
+      </a>
+    {{ else if eq $key "github" }}
+      <a href="{{ $value }}" class="social_icon_a">
+        <i class="fa-brands fa-github social_icon"></i>
+      </a>
+    {{ end }}
+  {{ end }}
+  <p>
+    {{ .Site.Params.description }}
+  </p>
+  <div>
+      <!-- Loop through top level sections !-->
+      {{  range .Site.Sections }}
+        {{ if not (isset .Params "display") }}
+          <h3 class="top_section_title">{{ .Title }}</h3>
+          <p class="outer_section_description"> {{ .Description }} </p>
+          {{/* inner sections can use weight to re-order */}}
+          {{ range .Sections }}
+            <p class="inner_section_description"> {{ .Description }} </p>
+
+            {{ if ne (len .RegularPages) 0 }}
+              <h4 class="recent_posts">Recent Posts</h4>
+            {{ end }}
+
+            {{ $type := .Type }}
+            {{ $files := where .Pages "Section" $type }}
+            <ul style="margin-top: 5px">
+              {{ range $files }}
+                <li>
+                  <a href = "{{ .RelPermalink }}" style="display: inline;">{{ .Title }}</a>
+                  {{ if (isset .Params "tags") }}
+                    [
+                      {{ range .Params.tags }}
+                        <a href="/tags/{{ lower . }}" style="display: inline;">{{ . }}</a>
+                      {{ end }}
+                    ]
+                  {{ end }}
+                </li>
+              {{ end }}
+            </ul>
+          {{ end }}
+
+        {{ end }}
+      {{ end }}
+
+  </div>
+  </div>
+  {{ with .Site.Params.includeFooter }}
+  <p class="footer_section">Free Hugo Theme by <span><a href="https://github.com/sefeng211/techlab-hugo-theme">TechLab Theme</a></span></p>
+  {{ end }}
+{{ end }}

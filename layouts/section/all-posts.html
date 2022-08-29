@@ -1,0 +1,13 @@
+{{ define "main" }}
+<main class="main_section">
+  <ul class="all-posts">
+  {{range .Site.RegularPages}}
+    <li>
+      <span id="date"> {{ .Date | time.Format ":date_medium" }} </span>
+      <a href="{{.RelPermalink}}">{{.Title}}</a>
+    </li>
+  {{end}}
+  </ul>
+</main>
+{{ end }}
+

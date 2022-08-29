@@ -1,0 +1,22 @@
+{{ define "main" }}
+<main class="main_section">
+    <h2 id="title">{{ .Title }}</h2>
+      <div>
+        <article id="content">
+           {{ .Content }}
+        </article>
+      </div>
+    <aside id="meta">
+        <div>
+        <h5 id="date"> {{ .Date | time.Format ":date_medium" }} </h5>
+        {{ with .Params.tags }}
+          [
+            {{ range . }}
+              <a href="/tags/{{ lower . }}" style="display: inline;">{{ . }}</a>
+            {{ end }}
+          ]
+        {{ end }}
+        </div>
+    </aside>
+</main>
+{{ end }}
