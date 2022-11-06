@@ -6,7 +6,7 @@ A Hugo theme that targets simplicity.
 
 ## Live Demos
 Live Demo: https://techlab.seanfeng.dev/
-* The content and config of this sample site can be found in the [techlab-example-site](/techlab-exmaple-site) directory
+* The content and config of this sample site can be found in the [techlab-example-site](https://github.com/sefeng211/techlab-hugo-theme/tree/main/techlab-example-site) directory
 
 You can also check out https://seanfeng.dev for a more realistic usage.
 
