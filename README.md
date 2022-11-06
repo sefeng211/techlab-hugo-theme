@@ -1,7 +1,7 @@
 # TechLab Hugo Theme
 
 ## Screenshots
-![Screentshot of seanfeng.dev](https://github.com/sefeng211/techlab-hugo-theme/blob/media/seanfeng.dev.png?raw=true =50%x50%)
+![Screentshot of seanfeng.dev](https://github.com/sefeng211/techlab-hugo-theme/blob/media/seanfeng.dev.png?raw=true =404x445)
 
 ## Install
 Run `git submodule add git@github.com:sefeng211/techlab-hugo-theme.git themes/techlab`
