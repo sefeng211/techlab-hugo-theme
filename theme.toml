@@ -1,36 +1,17 @@
-# theme.toml template for a Hugo theme
-# See https://github.com/gohugoio/hugoThemes#themetoml for an example
-
-baseURL = "http://exmaple.com/"
-languageCode = 'en-us'
-title = "TechLab Hugo Theme"
-theme = 'techlab'
-hasCJKLanguage = true
+name = "TechLab"
+license = "MIT"
+licenselink = "https://github.com/sefeng211/techlab-hugo-theme/blob/main/LICENSE"
+description = "A Simple Hugo Theme"
 min_version = "0.92.0"
 
-[menu]
-[[menu.main]]
-  name = 'About'
-  url = '/about/'
-  weight = 2
-[[menu.main]]
-  name = 'All Posts'
-  url = '/all-posts/'
-  weight = 1
-[[menu.main]]
-  name = 'RSS'
-  url = '/index.xml'
-  weight = 3
+homepage = "https://github.com/sefeng211/techlab-hugo-theme"
 
-[params]
-  description = "Hello and Welcome! I am Sean and I am a Software Engineer at Mozilla. I create this website because I think it's cool."
-  includeFooter = true
-  [params.social]
-    Email = "sean@seanfeng.dev"
-    Github = "https://github.com/sefeng211"
-    Bilibili = "https://space.bilibili.com/2901493"
-    Linkedin = "https://www.linkedin.com/in/shuo-sean-feng/"
+demosite = "https://techlab.seanfeng.dev/"
 
-[taxonomies]
-  tag = "tags"
-  example = "examples"
+tags = ["Blog", "Minimal", "Personal", "Light", "Clean", "Simple"]
+features = ["blog"]
+
+[author]
+    name = "Sean Feng"
+    homepage = "https://seanfeng.dev"
+
